@@ -1,9 +1,9 @@
 # Cosc211-Exc-8.7
 Quick link to files:
 <br>
-[FindNearestPoints.java]()
+[FindNearestPoints.java](Excercise-8.7/src/pkg/FindNearestPoints.java)
 <br>
-[JUnit Test File]()
+[JUnit Test File](Excercise-8.7/test/pkg/FindNearestPointsTest.java)
 ## Method overview
 double[][] inputArrayFromUser()
 - creates a Scanner object and calls inputArray(), returning the array recieved
