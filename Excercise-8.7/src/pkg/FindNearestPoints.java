@@ -11,12 +11,8 @@ public class FindNearestPoints {
    */
   public static void main(String[] args) {
     double[][] points = inputArrayFromUser();
-
-    int[] coordinatesOfClosesPoints = closestPoints(points);
-    int closestPointIndex1 = coordinatesOfClosesPoints[0];
-    int closestPointIndex2 = coordinatesOfClosesPoints[1];
-
-    displayPoints(points, closestPointIndex1, closestPointIndex2);
+    int[] indexesOfClosestPoints = closestPoints(points);
+    displayPoints(points, indexesOfClosestPoints[0], indexesOfClosestPoints[1]);
   }
 
   public static double[][] inputArrayFromUser() {
@@ -55,12 +51,13 @@ public class FindNearestPoints {
     return new int[] {p1, p2};
   }
 
+  // modified method header by also sending in the array itself, as without an instance variable,
+  // the (int,int) header does'nt make sense
   public static void displayPoints(double[][] points, int index1, int index2) {
     System.out.println("The closest two points are (" + points[index1][0] + ", " + points[index1][1]
         + ", " + points[index1][2] + ") and (" + points[index2][0] + ", " + points[index2][1] + ", "
         + points[index2][2] + ")");
   }
-
 
   public static double distanceBetweenTwoPoints(double[] firstPoint, double[] secondPoint) {
     double changeInX = secondPoint[0] - firstPoint[0];
